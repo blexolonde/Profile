@@ -3,7 +3,7 @@
 ## About Me
 
 - 🔭 I’m currently working on transforming ideas into reality with code.
-- 🌱 I’m currently learning Python, SQL, R programming, and mastering Git.
+- 🌱 I’m currently learning Python, SQL, R programming, Java script, and mastering Git.
 - 👯 I’m looking to collaborate on projects that involve data analysis and web development.
 - 🤔 I’m looking for help with enhancing my skills in machine learning.
 - 💬 Ask me about anything related to coding and soccer!
