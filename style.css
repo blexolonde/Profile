@@ -1,75 +1,82 @@
+/* Apply a gradient background */
 body {
-    background-color: #e6e6fa;
-    color: #191970;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-  }
-  
-  #wrapper {
-    width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  nav {
-    background-color: #191970;
-    color: #e6e6fa;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  nav a {
-    color: #e6e6fa;
-    margin: 0 10px;
-    text-decoration: none;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
-  
-  h1 {
-    background-color: #191970;
-    color: #e6e6fa;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  h2 {
-    background-color: #aeaed4;
-    color: #191970;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  .content {
-    padding: 20px;
-  }
-  
-  button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #191970;
-    color: #e6e6fa;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  button:hover {
-    background-color: #aeaed4;
-  }
-  
-  footer {
-    background-color: #191970;
-    color: #e6e6fa;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #f3e6ff, #a18cd1);
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite;
+  color: #333;
+}
+
+/* Keyframes for a smooth background transition */
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Profile container styling */
+.profile-container {
+  max-width: 800px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+}
+
+.bio {
+  font-size: 18px;
+  color: #666;
+  margin: 15px 0;
+}
+
+.skills, .portfolio, .contact {
+  margin-top: 30px;
+}
+
+.section-title {
+  font-size: 24px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.skills-list, .portfolio-list, .contact-links {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skills-list li, .portfolio-list li, .contact-links li {
+  background: #f3e6ff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.contact-links a {
+  text-decoration: none;
+  color: #a18cd1;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
