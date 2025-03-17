@@ -1,82 +1,197 @@
-/* Apply a gradient background */
+/* General Styles */
 body {
+  font-family: "Sono", sans-serif;
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #f3e6ff, #a18cd1);
-  background-size: 400% 400%;
-  animation: gradientBackground 15s ease infinite;
+  padding: 0;
+  background-color: #f5f5f5;
   color: #333;
 }
 
-/* Keyframes for a smooth background transition */
-@keyframes gradientBackground {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Profile container styling */
-.profile-container {
-  max-width: 800px;
-  margin: 50px auto;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+/* Header */
+header {
+  background-color: #007bff;
+  color: white;
   text-align: center;
+  padding: 20px;
 }
 
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  object-fit: cover;
+header h1 {
+  margin: 0;
+  font-family: "Coiny", cursive;
 }
 
-.name {
-  font-size: 32px;
+/* Navigation Bar */
+nav {
+  background-color: #0056b3;
+  text-align: center;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
   font-weight: bold;
-  color: #333;
+  transition: color 0.3s ease;
 }
 
-.bio {
-  font-size: 18px;
-  color: #666;
-  margin: 15px 0;
+nav ul li a:hover {
+  color: #ffcc00;
 }
 
-.skills, .portfolio, .contact {
-  margin-top: 30px;
+/* Sections */
+section {
+  width: 80%;
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.section-title {
-  font-size: 24px;
-  color: #555;
+/* Skills Section */
+.skill-category {
+  margin-bottom: 20px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
   margin-bottom: 10px;
 }
 
-.skills-list, .portfolio-list, .contact-links {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+.skill-icon img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 }
 
-.skills-list li, .portfolio-list li, .contact-links li {
-  background: #f3e6ff;
-  padding: 10px 15px;
+.skill-info {
+  flex: 1;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #007bff;
+  border-radius: 5px;
+}
+
+/* Project Cards */
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: #007bff;
+  color: white;
+  padding: 15px;
   border-radius: 10px;
-  font-size: 16px;
-  color: #555;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
-.contact-links a {
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+/* Contact Form */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#contact-form button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #444; /* Lighter gray for better contrast */
+  color: white;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: #ffcc00;
   text-decoration: none;
-  color: #a18cd1;
 }
 
-.contact-links a:hover {
+footer a:hover {
   text-decoration: underline;
+}
+
+/* See All Projects Button */
+.see-all-projects {
+  display: inline-block;
+  background-color: #f5c29f; /* Light orange background */
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.see-all-projects a {
+  text-decoration: none;
+  color: #e67e22; /* Orange text */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.see-all-projects a:hover {
+  color: #d35400; /* Darker orange on hover */
+}
+
+/* Footer Icon Styling */
+footer i {
+  font-size: 24px; /* Adjust icon size */
+  color: white; /* Changed to white for better visibility */
+  margin-right: 10px; /* Space between icons */
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8); /* Added glow effect */
+}
+
+footer a {
+  color: white; /* Changed to white for consistency */
+  text-decoration: none; /* Remove underline */
+}
+
+footer a:hover i {
+  color: #ffcc00; /* Change icon color on hover */
 }

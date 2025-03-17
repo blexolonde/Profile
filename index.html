@@ -1,49 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Freelance Profile</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <div class="profile-container">
-        <img src="your-photo.jpg" alt="Profile Picture" class="profile-pic">
-        <div class="name">Blex Olonde</div>
-        <p class="bio">A brief introduction about you as a freelancer, your field of expertise, and what makes you unique.</p>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coiny&family=Sono:wght@400;600&display=swap"
+      rel="stylesheet"
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    />
+
+    <link href="style.css" rel="stylesheet" />
+    <title>Blex website</title>
+  </head>
+  <body>
+    <header>
+      <h1>Blex Olonde</h1>
+      <p>Data Analyst | Machine Learning Enthusiast | Front-End Developer</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Welcome to my portfolio! I am a data science and machine learning enthusiast with a strong foundation in data analysis, SQL, and front-end web development.My passion lies in analyzing data, building meaningful visualizations, and creating interactive web-based solutions.</p>
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-category">
+          <h3>Programming Languages</h3>
+          <div class="skill">
+            <div class="skill-icon">
+              <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python">
+            </div>
+            <div class="skill-info">
+              <p>Python</p>
+              <div class="progress-bar" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-icon">
+              <img src="https://img.icons8.com/ios/50/000000/java.png" alt="Java">
+            </div>
+            <div class="skill-info">
+              <p>Java</p>
+              <div class="progress-bar" style="width: 70%"></div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="skill-category">
+          <h3>Data Analysis & Machine Learning</h3>
+          <div class="skill">
+            <div class="skill-icon">
+              <img src="https://img.icons8.com/ios/50/000000/sql.png" alt="SQL">
+            </div>
+            <div class="skill-info">
+              <p>SQL</p>
+              <div class="progress-bar" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-icon">
+              <img src="https://img.icons8.com/ios/50/000000/tensorflow.png" alt="TensorFlow">
+            </div>
+            <div class="skill-info">
+              <p>TensorFlow</p>
+              <div class="progress-bar" style="width: 60%"></div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="skill-category">
+          <h3>Web Development</h3>
+          <div class="skill">
+            <div class="skill-icon">
+              <img src="https://img.icons8.com/ios/50/000000/html-5.png" alt="HTML">
+            </div>
+            <div class="skill-info">
+              <p>HTML</p>
+              <div class="progress-bar" style="width: 95%"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-icon">
+              <img src="https://img.icons8.com/ios/50/000000/css3.png" alt="CSS">
+            </div>
+            <div class="skill-info">
+              <p>CSS</p>
+              <div class="progress-bar" style="width: 90%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-cards">
+        <div class="project-card">
+          <h3>Data Analysis with Python</h3>
+          <p>A deep dive into data analysis using Python libraries such as Pandas and Matplotlib.</p>
+        </div>
+        <div class="project-card">
+          <h3>Machine Learning Model for XYZ</h3>
+          <p>Built a machine learning model to predict outcomes for XYZ using Scikit-Learn and TensorFlow.</p>
+        </div>
+        <div class="project-card">
+          <h3>Interactive Dashboard with Python & SQL</h3>
+          <p>Developed an interactive dashboard for data visualization using Python and SQL queries.</p>
+        </div>
+        <div class="project-card">
+          <h3>Web Development</h3>
+          <p>Created a fully responsive website with HTML, CSS, and JavaScript, showcasing front-end development skills.</p>
+        </div>
+        <div class="see-all-projects">
+          <a href="#projects">See all projects →</a>
+        </div>
         
-        <div class="skills">
-            <div class="section-title">Skills</div>
-            <ul class="skills-list">
-                <li>Web Development</li>
-                <li>Web-Scraping</li>
-                <li>Data cleaning and Preprocessing</li>
-                <li>Python </li>
-                <li>Competitor Analysis</li>
-                <li>SEO</li>
-                <li>social media marketing </li>
-            </ul>
-        </div>
+      </div>
+    </section>
 
-        <div class="portfolio">
-            <div class="section-title">Portfolio</div>
-            <ul class="portfolio-list">
-                <li>Project 1</li>
-                <li>Project 2</li>
-                <li>Project 3</li>
-            </ul>
-        </div>
+  </section>
 
-        <div class="contact">
-            <div class="section-title">Contact</div>
-            <ul class="contact-links">
-                <li><a href="mailto:your-email@example.com">Email</a></li>
-                <li><a href="https://github.com/your-profile" target="_blank">GitHub</a></li>
-                <li><a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a></li>
-            </ul>
-        </div>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form" action="your-server-side-script.php" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required placeholder="Your name" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required placeholder="Your email" />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required placeholder="Your message"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+     <!-- LinkedIn and GitHub Icons -->
+      <p>
+        LinkedIn: 
+        <a href="https://www.linkedin.com/in/blexolonde" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </p>
+      
+      <p>
+        GitHub: 
+        <a href="https://github.com/blexolonde" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </p>
+      <p>&copy; 2025 Blex Olonde. All rights reserved.</p>
+      
+     
     </div>
-
+  </footer>
+  
 </body>
 </html>
