@@ -12,73 +12,84 @@
      --text-color: #0D4D41;
      --accent-color: #0D4D41;
      --border-color: rgba(13, 77, 65, 0.3);
-     --gradient-start: #F5F3EE;
-     --gradient-end: #DDE6D5;
+     --gradient-start: #2ED2DB;
+     --gradient-end: #E9C27D;
      --background: #EDE8D5;
    }
    
    /* =======================
-      General Styles
+      Smooth Animated Gradient Background
       ======================= */
+   @keyframes gradientShift {
+     0% { background-position: 0% 50%; }
+     50% { background-position: 100% 50%; }
+     100% { background-position: 0% 50%; }
+   }
+   
    body {
-     font-family: 'IBM Plex Sans', sans-serif;
-     background: var(--background);
+     font-family: "IBM Plex Sans", sans-serif;
+     background: linear-gradient(to bottom right, var(--gradient-start), var(--gradient-end));
+     background-size: 200% 200%;
+     animation: gradientShift 6s ease-in-out infinite;
      color: var(--text-color);
      margin: 0;
      padding: 0;
      line-height: 1.6;
+     padding-top: 80px;
+     transition: background-color 0.5s ease, color 0.5s ease;
    }
-
+   
    /* =======================
-     Navigation Bar
-     ======================= */
-  .navbar {
-    background: rgba(245, 245, 245, 0.85);
-    backdrop-filter: blur(10px);
-    padding: 10px 30px;
-    border-radius: 40px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar a {
-    text-decoration: none;
-    color: #4a4a4a;
-    font-weight: 600;
-    padding: 8px 12px;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-  }
-  
-  .navbar .active a {
-    background: white;
-    padding: 10px 15px;
-    border-radius: 20px;
-    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  
-  .navbar a:hover {
-    color: var(--primary-color);
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 12px;
-  }
+      Navigation Bar
+      ======================= */
+   .navbar {
+     background: rgba(245, 245, 245, 0.95);
+     backdrop-filter: blur(10px);
+     padding: 10px 30px;
+     border-radius: 40px;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+     display: flex;
+     justify-content: center;
+     position: fixed;
+     top: 20px;
+     left: 50%;
+     transform: translateX(-50%);
+     z-index: 1000;
+   }
+   
+   .navbar ul {
+     list-style: none;
+     display: flex;
+     gap: 20px;
+     align-items: center;
+     margin: 0;
+     padding: 0;
+   }
+   
+   .navbar a {
+     text-decoration: none;
+     color: #4a4a4a;
+     font-weight: 600;
+     padding: 8px 12px;
+     border-radius: 12px;
+     transition: all 0.3s ease;
+   }
+   
+   .navbar .active a {
+     background: white;
+     padding: 10px 15px;
+     border-radius: 20px;
+     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
+     display: flex;
+     align-items: center;
+     gap: 5px;
+   }
+   
+   .navbar a:hover {
+     color: var(--primary-color);
+     background: rgba(255, 255, 255, 0.5);
+     border-radius: 12px;
+   }
    
    /* =======================
       Hero Section
@@ -86,48 +97,75 @@
    .hero {
      text-align: center;
      padding: 100px 20px;
-     background: linear-gradient(to bottom, #f5f5dc, #ede8d5);
      position: relative;
+     margin-top: 2px;
    }
    
    .hero h1 {
-     font-size: 3.8rem;
+     font-size: 4.5rem;
      font-weight: 800;
      color: var(--primary-color);
      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+     margin-top: 5px;
+     margin-bottom: 5px;
+   }
+   
+   .hero h1 + h1 {
+     font-size: 4.0rem;
+     font-weight: 900;
+     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+     margin-top: 5px;
    }
    
    .hero p {
-     font-size: 1.2rem;
+     font-size: 1.3rem;
      color: #2f3e46;
-     max-width: 600px;
+     max-width: 650px;
      margin: 15px auto;
    }
    
-   .hero .highlight {
-     font-size: 4.2rem;
-     font-weight: 900;
-   }
+   /* =======================
+      Decorative Stars (Enlarged)
+      ======================= */
+      .star {
+        font-size: 7rem; 
+        color: white;
+        position: absolute;
+        z-index: 1;
+        filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.8)); /* Glow */
+      }
+      
+      /* Star ya Kushoto */
+      .star-left {
+        top: 10%; 
+        left: 20%; 
+        transform: rotate(-15deg);
+      }
+      
+      /* Star ya Kulia */
+      .star-right {
+        top: 10%;
+        right: 20%; 
+        transform: rotate(15deg);
+      }
+      
    
-   /* Decorative Stars */
-   .star {
-     font-size: 4rem;
+   /* =======================
+      Button Hover Effect
+      ======================= */
+   .btn {
+     padding: 12px 24px;
+     background-color: var(--primary-color);
      color: white;
-     position: absolute;
-     font-size: 6rem;
-     z-index: 1;
+     text-decoration: none;
+     border-radius: 8px;
+     font-weight: 600;
+     transition: background-color 0.3s ease, transform 0.3s ease;
    }
    
-   .star-right {
-     top: 50%;
-     right: 10%;
-     transform: translate(50%, -50%);
-   }
-   
-   .star-left {
-     top: 50%;
-     left: 10%;
-     transform: translate(-50%, -50%);
+   .btn:hover {
+     background-color: #9a9d9e;
+     transform: scale(1.05);
    }
    
    /* =======================
@@ -179,7 +217,6 @@
       Footer
       ======================= */
    footer {
-     background: var(--background);
      color: var(--text-color);
      padding: 2rem 0;
      text-align: center;
@@ -213,6 +250,13 @@
    /* =======================
       Responsive Design
       ======================= */
-   @media (max-width: 1200px) { .project-card { width: 30%; } }
-   @media (max-width: 900px) { .project-card { width: 45%; } }
-   @media (max-width: 600px) { .project-card { width: 100%; } }
+   @media (max-width: 1200px) { 
+     .project-card { width: 30%; } 
+   }
+   @media (max-width: 900px) { 
+     .project-card { width: 45%; } 
+   }
+   @media (max-width: 600px) { 
+     .project-card { width: 100%; } 
+   }
+   
