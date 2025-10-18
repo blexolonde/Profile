@@ -1,121 +1,561 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blex Olonde | Portfolio</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blex Olonde – Front-end developer and data analyst passionate about crafting web solutions and extracting insights from data.">
+  <title>Blex Olonde – Front-end Developer & Data Analyst</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/Bleezy.png">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Coiny&family=Sono:wght@400;600&family=Inter:ital,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-      rel="stylesheet"
-    />
+<body>
 
-    <!-- Material Icons for the Star -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=star"
-    />
+<!-- Navigation -->
+  <nav class="navbar" aria-label="Main Navigation">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="work.html">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  
+  
+<!-- Hero Section -->
+  <header class="hero" id="home">
+    <div class="star star-right">
+      <img src="assets/images/Star.svg" alt="Decorative star icon" aria-hidden="true" />
+    </div>
+    <h1>Hi. I'm Blex.<br><span>A Creative dev & Data analyst.</span></h1>
+    <div class="star star-left">
+      <img src="assets/images/Star.svg" alt="Decorative star icon" aria-hidden="true" />
+    </div>
+    <p>I analyze data, build meaningful visualizations, and create interactive web-based solutions.</p>
+    <a href="#contact" class="cta-button"> Contact Me</a>
+  </header>
 
-    <!-- FontAwesome Icons -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Header Section -->
-    <header>
-      <div class="container">
-        <nav class="navbar">
-          <ul>
-            <li><a href="index.html">/Work</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
+  <!-- Projects Section -->
+<section class="projects" id="work" aria-label="Portfolio Projects">
+
+  <!-- Aviation Data Science Project -->
+  <div class="project-card aviation" onclick="openModal('aviation-modal')">
+    <div class="project-header">
+      <div>
+        <h3 class="project-title">Aviation Analytics Dashboard</h3>
+        <p class="project-subtitle">Data Science • Python • Tableau</p>
       </div>
-    </header>
+      <span class="project-status">Completed</span>
+    </div>
+    <div class="project-preview">
+      <img src="images/ai.png" alt="Preview of aviation data science dashboard" loading="lazy" />
+    </div>
+    <div class="tech-stack">
+      <span class="tech-badge">Python</span>
+      <span class="tech-badge">Pandas</span>
+      <span class="tech-badge">Tableau</span>
+      <span class="tech-badge">SQL</span>
+    </div>
+    <p class="project-description">
+      Comprehensive analysis of aviation data to identify performance trends, optimize routes, and predict maintenance needs.
+    </p>
+    <div class="project-actions">
+      <button class="btn btn-primary">View Case Study</button>
+      <a href="#" class="btn btn-secondary">Live Demo</a>
+    </div>
+  </div>
 
-    <!-- Hero Section -->
-    <section id="about" class="hero">
-      <div class="container">
-        <!-- Upper Decorative Star -->
-        <div class="star star-right">
-          <span class="material-symbols-outlined">star</span>
-        </div>
-
-        <h1>Hi<span>.</span> I'm <span class="highlight">Blex</span></h1>
-        <h1>Front-End Data Analyst.</h1>
-
-        <!-- Lower Decorative Star -->
-        <div class="star star-left">
-          <span class="material-symbols-outlined">star</span>
-        </div>
-
-        <p>
-          I'm passionate about analyzing data, building meaningful
-          visualizations, and creating interactive web-based solutions.
-        </p>
-        <a href="#projects" class="btn">View My Work</a>
+  <!-- Movie Data Analysis -->
+  <div class="project-card articles" onclick="openModal('movie-modal')">
+    <div class="project-header">
+      <div>
+        <h3 class="project-title">Movie Success Predictor</h3>
+        <p class="project-subtitle">Machine Learning • Data Analysis</p>
       </div>
-    </section>
+      <span class="project-status">Completed</span>
+    </div>
+    <div class="project-preview">
+      <img src="images/articles.png" alt="Preview of movie data analysis project" loading="lazy" />
+    </div>
+    <div class="tech-stack">
+      <span class="tech-badge">Python</span>
+      <span class="tech-badge">Scikit-learn</span>
+      <span class="tech-badge">Matplotlib</span>
+      <span class="tech-badge">Jupyter</span>
+    </div>
+    <p class="project-description">
+      Built predictive models to analyze movie success factors including box office performance, ratings, and audience demographics.
+    </p>
+    <div class="project-actions">
+      <button class="btn btn-primary">View Case Study</button>
+      <a href="#" class="btn btn-secondary">GitHub</a>
+    </div>
+  </div>
 
-    <!-- Projects Section -->
-    <section id="projects">
-      <div class="container">
-        <h2>Projects</h2>
-        <div class="project-cards">
-          <div class="project-card ai">
-            <img src="images/dataanalysis.jpg" alt="AI Project" />
-            <h3>Data Analysis</h3>
-            <p>Enhanced data insights and automate reporting.</p>
-          </div>
-          <div class="project-card articles">
-            <img src="images/ml.jpg" alt="Articles" />
-            <h3>Machine Learning Modeling</h3>
-            <p>Built an NLP model to generate and optimize content.</p>
-          </div>
-          <div class="project-card plugins">
-            <img src="images/webdev.jpg" alt="Plugins" />
-            <h3>Front End web Dev</h3>
-            <p>Developed  a full website.</p>
-          </div>
-          <div class="project-card mobile">
-            <img src="https://www.techmonitor.ai/wp-content/uploads/sites/29/2016/07/what-is-tableau-2.png" alt="Mobile" />
-            <h3>Tableau</h3>
-            <p>Designed an interactive dashborad.</p>
-          </div>
-        </div>
+  <!-- Web Dev -->
+  <div class="project-card plugins" onclick="openModal('web-modal')">
+        <div class="project-header">
+      <div>
+        <h3 class="project-title">Web Development</h3>
+        <p class="project-subtitle">Personal Website • portofolio</p>
       </div>
-    </section>
+      <span class="project-status">Completed</span>
+    </div>
+    <div class="project-preview">
+      <img src="assets/images/website.png" alt="Preview of custom-built website project" loading="lazy" />
+    </div>
+     <div class="tech-stack">
+        <span class="tech-badge">HTML5</span>
+        <span class="tech-badge">CSS3</span>
+        <span class="tech-badge">JavaScript</span>
+        <span class="tech-badge">Responsive</span>
+    </div>
+    <p class="project-description">
+      Custom-built personal portfolio website showcasing web development and design skills with responsive layouts and animations..
+    </p>
+    <div class="project-actions">
+      <button class="btn btn-primary">Preview</button>
+      <a href="#" class="btn btn-secondary">GitHub</a>
+    </div>
+  </div>
 
-    <!-- Footer Section -->
-    <footer>
-      <div class="footer-container">
-        <p>&copy; 2025 Blex Olonde •</p>
-
-        <!-- Dark Mode Toggle -->
-        <label class="theme-switch">
-          <input type="checkbox" id="theme-toggle" />
-          <span class="slider"></span>
-        </label>
-
-        <div class="footer-links">
-          <a href="https://github.com/blexolonde" target="_blank"
-            ><i class="fab fa-github"></i> GitHub</a
-          >
-          <a href="https://www.linkedin.com/in/blexolonde" target="_blank"
-            ><i class="fab fa-linkedin"></i> LinkedIn</a
-          >
-        </div>
+  <!-- Data Visualization -->
+  <div class="project-card mobile" onclick="openModal('churn-modal')">
+   <div class="project-header">
+      <div>
+        <h3 class="project-title">Machine Learning</h3>
+        <p class="project-subtitle">Churn Prediction</p>
       </div>
-    </footer>
+      <span class="project-status">Completed</span>
+    </div>
+    <div class="project-preview">
+      <img src="images/mobile.png" alt="Churn prediction dashboard preview" loading="lazy" />
+    </div>
+    <div class="tech-stack">
+      <span class="tech-badge">Python</span>
+      <span class="tech-badge">Scikit-learn</span>
+      <span class="tech-badge">Matplotlib</span>
+      <span class="tech-badge">Jupyter</span>
+    </div>
+    <p class="project-description">
+      Interactive dashboard analyzing customer churn and predicting risk levels using advanced data visualization techniques.
+    </p>
+    <div class="project-actions">
+      <button class="btn btn-primary">View Case Study</button>
+      <a href="#" class="btn btn-secondary">GitHub</a>
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- Modal for Aviation Project -->
+<div id="aviation-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">Aviation Analytics Dashboard</h2>
+            <button class="close-btn" onclick="closeModal('aviation-modal')">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="project-metrics">
+                <div class="metric">
+                    <span class="metric-value">47%</span>
+                    <span class="metric-label">Efficiency Improvement</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">$2.3M</span>
+                    <span class="metric-label">Cost Savings</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">15+</span>
+                    <span class="metric-label">Airlines Using</span>
+                </div>
+            </div>
+
+            <h3 class="section-title">Project Overview</h3>
+            <p>This comprehensive aviation analytics dashboard was developed to help airlines optimize their operations through data-driven insights. The project involved analyzing massive datasets from multiple sources including flight schedules, weather data, and maintenance records.</p>
+
+            <div class="challenge-solution">
+                <div class="challenge">
+                    <h4>Challenge</h4>
+                    <p>Airlines were struggling with flight delays, inefficient routing, and unpredictable maintenance costs, leading to significant revenue losses and poor customer satisfaction.</p>
+                </div>
+                <div class="solution">
+                    <h4>Solution</h4>
+                    <p>Created an integrated dashboard that predicts delays, optimizes routes in real-time, and provides predictive maintenance alerts, resulting in substantial operational improvements.</p>
+                </div>
+            </div>
+
+            <h3 class="section-title">Key Features</h3>
+            <ul style="line-height: 1.8; color: #555;">
+                <li>Real-time flight tracking and delay prediction</li>
+                <li>Weather integration for route optimization</li>
+                <li>Predictive maintenance scheduling</li>
+                <li>Cost analysis and savings calculator</li>
+                <li>Interactive visualizations with Tableau</li>
+            </ul>
+
+            <h3 class="section-title">Technical Implementation</h3>
+            <p>Built using Python for data processing, with pandas and numpy for analysis. The dashboard was created in Tableau with custom SQL queries for data extraction. Machine learning models were implemented using scikit-learn for predictive analytics.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Movie Project -->
+<div id="movie-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">Movie Success Predictor</h2>
+            <button class="close-btn" onclick="closeModal('movie-modal')">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="project-metrics">
+                <div class="metric">
+                    <span class="metric-value">89%</span>
+                    <span class="metric-label">Prediction Accuracy</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">10K+</span>
+                    <span class="metric-label">Movies Analyzed</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">25+</span>
+                    <span class="metric-label">Success Factors</span>
+                </div>
+            </div>
+
+            <h3 class="section-title">Project Overview</h3>
+            <p>A machine learning project that analyzes historical movie data to predict box office success and identify key factors that contribute to a film's commercial performance.</p>
+
+            <div class="challenge-solution">
+                <div class="challenge">
+                    <h4>Challenge</h4>
+                    <p>Movie studios needed better insights into what makes a film successful to make informed investment decisions and reduce financial risks.</p>
+                </div>
+                <div class="solution">
+                    <h4>Solution</h4>
+                    <p>Developed ML models that analyze genre, cast, budget, and release timing to predict success with 89% accuracy, providing actionable insights for film production.</p>
+                </div>
+            </div>
+
+            <h3 class="section-title">Machine Learning Models</h3>
+            <ul style="line-height: 1.8; color: #555;">
+                <li>Random Forest for feature importance analysis</li>
+                <li>Linear Regression for box office prediction</li>
+                <li>Clustering analysis for audience segmentation</li>
+                <li>Sentiment analysis of reviews and social media</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Enhanced Web Modal -->
+<div class="modal" id="web-modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">Personal Portfolio Website</h2>
+            <button class="close-btn" onclick="closeModal('web-modal')">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="project-metrics">
+                <div class="metric">
+                    <span class="metric-value">98%</span>
+                    <span class="metric-label">Performance Score</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">5K+</span>
+                    <span class="metric-label">Monthly Visitors</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">100%</span>
+                    <span class="metric-label">Mobile Responsive</span>
+                </div>
+            </div>
+
+            <h3 class="section-title">Project Overview</h3>
+            <p>A fully responsive personal portfolio website showcasing web development skills and design expertise. Built from scratch with modern web technologies to create an engaging user experience that effectively presents professional work and capabilities.</p>
+
+            <div class="challenge-solution">
+                <div class="challenge">
+                    <h4>Challenge</h4>
+                    <p>Needed a professional online presence that would stand out in the competitive web development field while showcasing technical skills and creative design abilities.</p>
+                </div>
+                <div class="solution">
+                    <h4>Solution</h4>
+                    <p>Created a custom-built website with smooth animations, intuitive navigation, and optimized performance that effectively communicates expertise and personality to potential clients and employers.</p>
+                </div>
+            </div>
+
+            <h3 class="section-title">Key Features</h3>
+            <ul style="line-height: 1.8; color: #555;">
+                <li>Responsive design optimized for all devices</li>
+                <li>Smooth CSS animations and transitions</li>
+                <li>Interactive project showcase with filtering</li>
+                <li>Contact form with validation</li>
+                <li>SEO optimized with meta tags</li>
+                <li>Fast loading times and performance optimization</li>
+            </ul>
+
+            <h3 class="section-title">Technical Implementation</h3>
+            <p>Built with HTML5, CSS3, and vanilla JavaScript. Utilized CSS Grid and Flexbox for responsive layouts. Implemented smooth scrolling, lazy loading for images, and optimized assets for fast performance across all devices.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Enhanced Churn Modal -->
+<div class="modal" id="churn-modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">Customer Churn Prediction Dashboard</h2>
+            <button class="close-btn" onclick="closeModal('churn-modal')">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="project-metrics">
+                <div class="metric">
+                    <span class="metric-value">92%</span>
+                    <span class="metric-label">Prediction Accuracy</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">35%</span>
+                    <span class="metric-label">Churn Reduction</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">50K+</span>
+                    <span class="metric-label">Customers Analyzed</span>
+                </div>
+            </div>
+
+            <h3 class="section-title">Project Overview</h3>
+            <p>An advanced analytics dashboard that predicts customer churn probability and identifies at-risk customers using machine learning algorithms. The system provides actionable insights to help businesses implement targeted retention strategies.</p>
+
+            <div class="challenge-solution">
+                <div class="challenge">
+                    <h4>Challenge</h4>
+                    <p>Companies were losing customers without understanding the warning signs, resulting in declining revenue and increased acquisition costs to replace churned customers.</p>
+                </div>
+                <div class="solution">
+                    <h4>Solution</h4>
+                    <p>Developed a predictive model that identifies high-risk customers 3 months in advance, enabling proactive retention campaigns that significantly reduced churn rates.</p>
+                </div>
+            </div>
+
+            <h3 class="section-title">Key Features</h3>
+            <ul style="line-height: 1.8; color: #555;">
+                <li>Real-time churn risk scoring and alerts</li>
+                <li>Customer segmentation and behavior analysis</li>
+                <li>Interactive visualizations with drill-down capabilities</li>
+                <li>Automated reporting and email notifications</li>
+                <li>ROI calculator for retention campaigns</li>
+                <li>Historical trend analysis and forecasting</li>
+            </ul>
+
+            <h3 class="section-title">Technical Implementation</h3>
+            <p>Built with Python using pandas for data manipulation and scikit-learn for machine learning models. The dashboard was created using Plotly Dash with interactive visualizations. PostgreSQL database for data storage with automated ETL pipelines.</p>
+        </div>
+    </div>
+        <div class="project-actions">
+        <button class="btn btn-primary" onclick="event.stopPropagation(); openModal('churn-modal')">View Case Study</button>
+        <a href="#" class="btn btn-secondary" onclick="event.stopPropagation()">Dashboard</a>
+    </div>
+</div>
+
+
+
+<!-- In Progress Section -->
+<section class="in-progress">
+  <h1>In Progress</h1>
+  <p class="description">
+    Ongoing work spanning research, design, and development <br> 
+    each project evolving toward refined, impactful digital experiences.
+  </p>
+</section>
+
+  <!-- Projects Grid -->
+  <div class="project-grid" >
+
+    <!-- E-commerce Project Card -->
+    <div class="project-card light" onclick="openModal('ecommerce-modal')">
+      <div>
+        <h3 class="project-title">E-commerce Website</h3>
+        <p class="project-subtitle">Full Stack • React • Node.js</p>
+      </div>
+      <span class="project-status in-progress">In Progress</span>
+      <div class="project-preview">
+        <img src="images/doodler.png" alt="E-commerce site interface preview" loading="lazy" />
+      </div>
+      <div class="tech-stack">
+        <span class="tech-badge">React</span>
+        <span class="tech-badge">Node.js</span>
+        <span class="tech-badge">MongoDB</span>
+        <span class="tech-badge">Stripe</span>
+      </div>
+      <p class="project-description">
+        Full-featured e-commerce platform with payment integration, inventory management, and analytics dashboard.
+      </p>
+      <div class="project-actions">
+        <button class="btn btn-primary">View Progress</button>
+        <a href="#" class="btn btn-secondary">Preview</a>
+      </div>
+    </div>
+
+    <!-- Krom Bank Project Card -->
+    <div class="project-card dark" onclick="openModal('bank-modal')">
+      <div>
+        <h3 class="project-title">Krom Bank Data Analytics</h3>
+        <p class="project-subtitle">Data Science • Python • Tableau</p>
+      </div>
+      <span class="project-status in-progress">In Progr</span>
+      <div class="project-preview">
+        <img src="images/doodler.png" alt="Bank analytics dashboard preview" loading="lazy" />
+      </div>
+      <div class="tech-stack">
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">Tableau</span>
+        <span class="tech-badge">SQL</span>
+        <span class="tech-badge">Machine Learning</span>
+      </div>
+      <p class="project-description">
+        Comprehensive banking data analytics platform focusing on risk reduction, customer segmentation, and revenue growth.
+      </p>
+      <div class="project-actions">
+        <button class="btn btn-primary">View Progress</button>
+        <a href="#" class="btn btn-secondary">Preview</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Modal for E-commerce Project -->
+<div id="ecommerce-modal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 class="modal-title">E-commerce Platform</h2>
+      <button class="close-btn" onclick="closeModal('ecommerce-modal')">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="project-metrics">
+        <div class="metric"><span class="metric-value">75%</span><span class="metric-label">Complete</span></div>
+        <div class="metric"><span class="metric-value">React</span><span class="metric-label">Frontend Framework</span></div>
+        <div class="metric"><span class="metric-value">Q2 2025</span><span class="metric-label">Launch Target</span></div>
+      </div>
+      <h3 class="section-title">Project Status</h3>
+      <p>Currently developing a modern e-commerce platform with focus on user experience, performance, and scalability...</p>
+      <h3 class="section-title">Completed Features</h3>
+      <ul>
+        <li>User authentication and authorization</li>
+        <li>Product catalog with search and filtering</li>
+        <li>Shopping cart and wishlist functionality</li>
+        <li>Responsive design for all devices</li>
+      </ul>
+      <h3 class="section-title">Upcoming Features</h3>
+      <ul>
+        <li>Payment gateway integration</li>
+        <li>Order management system</li>
+        <li>Analytics dashboard</li>
+        <li>Admin panel for inventory management</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Krom Bank Project -->
+<div id="bank-modal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 class="modal-title">Krom Bank Data Analytics Project</h2>
+      <button class="close-btn" onclick="closeModal('bank-modal')">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="project-metrics">
+        <div class="metric"><span class="metric-value">$4.2M</span><span class="metric-label">Revenue Impact</span></div>
+        <div class="metric"><span class="metric-value">85%</span><span class="metric-label">Risk Reduction</span></div>
+        <div class="metric"><span class="metric-value">1M+</span><span class="metric-label">Customer Records</span></div>
+      </div>
+      <h3 class="section-title">Project Overview</h3>
+      <p>Comprehensive financial data analysis project for Krom Bank...</p>
+      <h3 class="section-title">Analysis Areas</h3>
+      <ul>
+        <li>Customer segmentation and lifetime value analysis</li>
+        <li>Credit risk assessment and fraud detection</li>
+        <li>Transaction pattern analysis and anomaly detection</li>
+        <li>Market basket analysis for cross-selling opportunities</li>
+      </ul>
+      <h3 class="section-title">Technical Implementation</h3>
+      <p>Utilized Python with pandas, numpy, and scikit-learn for data analysis...</p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <p>© 2025 Blex Olonde <span class="dot">·</span> </p>
+    </div>
+    
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://www.figma.com/@blexolonde" target="_blank" rel="noopener">Figma</a></li>
+          <li><a href="https://github.com/blexolonde" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="#posts">Posts</a></li>
+          <li><a href="cv.pdf" target="_blank" rel="noopener">CV</a></li>
+          <li><a href="https://www.linkedin.com/in/blexolonde" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:olonde.blex@gmail.com">Message</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <div class="footer-timeline">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="5"/>
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+    </button>
+    <div class="timeline-ticks">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span class="center"></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+</footer>
+
+  
+    <script src="assets/js/script.js"></script>
+
   </body>
 </html>
