@@ -1905,77 +1905,345 @@ button:focus-visible,
    Dark Mode
 ======================== */
 body.dark-mode {
-  background: linear-gradient(to bottom, #1a1a1a 0%, #2a2a2a 50%, #1a1a1a 100%);
-  color: #e0e0e0;
+  background: linear-gradient(to bottom, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  color: #e2e8f0;
 }
 
 body.dark-mode .navbar {
-  background: rgba(30, 30, 30, 0.8);
+  background: rgba(15, 23, 42, 0.8);
+  border-color: rgba(148, 163, 184, 0.1);
 }
 
 body.dark-mode .navbar a {
-  color: #c0c0c0;
+  color: #cbd5e1;
+}
+
+body.dark-mode .navbar a:hover,
+body.dark-mode .navbar a:focus {
+  color: var(--primary-light);
+  background: rgba(74, 222, 128, 0.1);
 }
 
 body.dark-mode .navbar a.active {
   color: var(--primary-light);
-  background: rgba(0, 139, 122, 0.2);
+  background: rgba(74, 222, 128, 0.15);
 }
 
 body.dark-mode .hero h1,
-body.dark-mode .in-progress h2,
-body.dark-mode .card-header h3,
+body.dark-mode .in-progress h1,
 body.dark-mode .about-heading,
 body.dark-mode .contact-hero h1 {
   color: var(--primary-light);
+  text-shadow: 2px 2px 12px rgba(74, 222, 128, 0.3);
 }
 
-body.dark-mode .project-card,
-body.dark-mode .progress-card {
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+body.dark-mode .hero p,
+body.dark-mode .in-progress .description,
+body.dark-mode .contact-intro {
+  color: #94a3b8;
 }
 
-body.dark-mode .doodler-card {
-  background: #3a3a3a;
+body.dark-mode .project-card {
+  background: rgba(30, 41, 59, 0.8);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  color: #e2e8f0;
 }
 
-body.dark-mode .footer {
-  background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+body.dark-mode .project-card.aviation {
+  background: linear-gradient(
+    135deg,
+    rgba(14, 116, 144, 0.4) 0%,
+    rgba(6, 78, 59, 0.4) 100%
+  );
 }
 
-body.dark-mode .footer-left p,
-body.dark-mode .footer-column h4 {
-  color: #e0e0e0;
+body.dark-mode .project-card.articles {
+  background: linear-gradient(
+    135deg,
+    rgba(124, 45, 18, 0.4) 0%,
+    rgba(69, 26, 3, 0.4) 100%
+  );
 }
 
-body.dark-mode .footer-left a,
-body.dark-mode .footer-column a {
-  color: #a0a0a0;
+body.dark-mode .project-card.plugins {
+  background: linear-gradient(
+    135deg,
+    rgba(131, 24, 67, 0.4) 0%,
+    rgba(76, 5, 25, 0.4) 100%
+  );
 }
 
-body.dark-mode .footer-left a:hover,
-body.dark-mode .footer-column a:hover {
+body.dark-mode .project-card.mobile {
+  background: linear-gradient(
+    135deg,
+    rgba(113, 63, 18, 0.4) 0%,
+    rgba(69, 26, 3, 0.4) 100%
+  );
+}
+
+body.dark-mode .project-card.light {
+  background: linear-gradient(
+    135deg,
+    rgba(20, 83, 45, 0.4) 0%,
+    rgba(5, 46, 22, 0.4) 100%
+  );
+}
+
+body.dark-mode .project-card.dark {
+  background: linear-gradient(
+    135deg,
+    rgba(168, 85, 247, 0.4) 0%,
+    rgba(217, 70, 239, 0.4) 100%
+  );
+}
+
+body.dark-mode .project-title {
   color: var(--primary-light);
 }
 
-body.dark-mode .principles-box,
+body.dark-mode .project-subtitle,
+body.dark-mode .project-description {
+  color: #94a3b8;
+}
+
+body.dark-mode .tech-badge {
+  background: rgba(74, 222, 128, 0.15);
+  color: var(--primary-light);
+  border-color: rgba(74, 222, 128, 0.2);
+}
+
+body.dark-mode .project-preview {
+  background: #1e293b;
+}
+
+body.dark-mode .project-preview::before {
+  background: rgba(30, 41, 59, 0.9);
+  color: #94a3b8;
+}
+
+body.dark-mode .modal-content {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+body.dark-mode .modal-header {
+  border-bottom-color: #334155;
+}
+
+body.dark-mode .modal-title {
+  color: var(--primary-light);
+}
+
+body.dark-mode .close-btn {
+  color: #94a3b8;
+}
+
+body.dark-mode .close-btn:hover {
+  color: var(--primary-light);
+}
+
+body.dark-mode .metric {
+  background: rgba(30, 41, 59, 0.6);
+}
+
+body.dark-mode .metric-value {
+  color: var(--primary-light);
+}
+
+body.dark-mode .metric-label {
+  color: #94a3b8;
+}
+
+body.dark-mode .section-title {
+  color: var(--primary-light);
+}
+
+body.dark-mode .modal-body {
+  color: #cbd5e1;
+}
+
+body.dark-mode .modal-body li {
+  color: #94a3b8;
+}
+
+body.dark-mode .challenge {
+  background: rgba(127, 29, 29, 0.3);
+  border-left-color: #f87171;
+}
+
+body.dark-mode .solution {
+  background: rgba(20, 83, 45, 0.3);
+  border-left-color: var(--primary-light);
+}
+
+body.dark-mode .about-text h2 {
+  color: var(--primary-light);
+}
+
+body.dark-mode .about-text p {
+  color: #94a3b8;
+}
+
+body.dark-mode .job {
+  background: rgba(74, 222, 128, 0.1);
+}
+
+body.dark-mode .job:hover {
+  background: rgba(74, 222, 128, 0.2);
+}
+
+body.dark-mode .job-content h3 {
+  color: var(--primary-light);
+}
+
+body.dark-mode .job-content p {
+  color: #94a3b8;
+}
+
+body.dark-mode .collaborate-section {
+  background: rgba(30, 41, 59, 0.8);
+}
+
+body.dark-mode .collaborate-section h2 {
+  color: var(--primary-light);
+}
+
+body.dark-mode .collaborate-section p {
+  color: #94a3b8;
+}
+
+body.dark-mode .principles-box {
+  background: transparent;
+}
+
+body.dark-mode .principle {
+  background: rgba(30, 41, 59, 0.8);
+}
+
+body.dark-mode .principle .number {
+  color: rgba(74, 222, 128, 0.2);
+}
+
+body.dark-mode .principle .title {
+  color: var(--primary-light);
+}
+
+body.dark-mode .principle .description {
+  color: #94a3b8;
+}
+
+body.dark-mode .story-paragraph {
+  color: #94a3b8;
+}
+
 body.dark-mode .contact-form-wrapper,
 body.dark-mode .contact-info-wrapper {
-  background: rgba(40, 40, 40, 0.8);
+  background: rgba(30, 41, 59, 0.8);
+}
+
+body.dark-mode .contact-form-wrapper h2,
+body.dark-mode .contact-info-wrapper h2 {
+  color: var(--primary-light);
+}
+
+body.dark-mode .form-group label {
+  color: #cbd5e1;
 }
 
 body.dark-mode .form-group input,
 body.dark-mode .form-group textarea {
-  background: #2a2a2a;
-  color: #e0e0e0;
-  border-color: rgba(255, 255, 255, 0.1);
+  background: #0f172a;
+  color: #e2e8f0;
+  border-color: #334155;
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group textarea:focus {
+  border-color: var(--primary-light);
+}
+
+body.dark-mode .method-icon {
+  background: rgba(74, 222, 128, 0.1);
+  color: var(--primary-light);
+}
+
+body.dark-mode .method-content h3 {
+  color: var(--primary-light);
+}
+
+body.dark-mode .method-content a,
+body.dark-mode .method-content p {
+  color: #94a3b8;
+}
+
+body.dark-mode .method-content a:hover {
+  color: var(--primary-light);
+}
+
+body.dark-mode .availability {
+  background: rgba(74, 222, 128, 0.05);
+  border-left-color: var(--primary-light);
+}
+
+body.dark-mode .availability h3 {
+  color: var(--primary-light);
+}
+
+body.dark-mode .availability p {
+  color: #94a3b8;
+}
+
+body.dark-mode .footer {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+body.dark-mode .footer-left p,
+body.dark-mode .footer-column h4 {
+  color: #e2e8f0;
+}
+
+body.dark-mode .footer-column a {
+  color: #94a3b8;
+}
+
+body.dark-mode .footer-column a:hover {
+  color: var(--primary-light);
+}
+
+body.dark-mode .footer-timeline {
+  border-top-color: rgba(148, 163, 184, 0.1);
+}
+
+body.dark-mode .theme-toggle {
+  background: rgba(74, 222, 128, 0.1);
+  color: var(--primary-light);
+}
+
+body.dark-mode .theme-toggle:hover {
+  background: rgba(74, 222, 128, 0.2);
+}
+
+body.dark-mode .timeline-ticks span {
+  background: rgba(74, 222, 128, 0.2);
+}
+
+body.dark-mode .timeline-ticks span.center {
+  background: var(--primary-light);
 }
 
 body.dark-mode .notification {
-  background: #2a2a2a;
-  color: #e0e0e0;
+  background: #1e293b;
+  color: #e2e8f0;
 }
 
+body.dark-mode .back-to-top {
+  background: var(--primary-light);
+  color: #0f172a;
+}
+
+body.dark-mode .back-to-top:hover {
+  background: #4ade80;
+}
 /* ========================
    Accessibility
 ======================== */
